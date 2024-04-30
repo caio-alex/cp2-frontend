@@ -1,0 +1,201 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --border-color: #6D1A36; /* Define uma variável CSS para a cor da borda */
+  --background-color: rgb(230, 230, 230);
+}
+
+body {
+  height: 100%; /* Define a altura do corpo da página como 100% da altura do viewport */
+  font-family: 'Mukta';
+}
+
+header {
+  background-color: var(--border-color);
+  padding: 50px; /* Adiciona preenchimento interno ao cabeçalho */
+  text-align: center; /* Alinha o texto do cabeçalho ao centro */
+  font-family: "Lobster"; /* Define a fonte do texto do cabeçalho */
+  font-size: larger; /* Define o tamanho da fonte do texto do cabeçalho */
+}
+
+@keyframes backInDown {
+  0% {
+    transform: translateY(-1200px) scale(.7);
+    opacity: .7;
+  }
+
+  80% {
+    transform: translateY(0px) scale(.7);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.backInDown {
+  -webkit-animation: backInDown 1.5s;
+  animation: backInDown 1.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+header a{
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  width: 100%; /* Define a largura da navegação como 100% do contêiner pai */
+  height: fit-content; /* Define a altura da navegação como 50 pixels */
+  padding: 20px;
+}
+
+.alinhamento nav.desktop ul {
+  display: flex; /* Define um contêiner flexível para a lista não ordenada da navegação */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-around; /* Distribui uniformemente os itens ao longo do eixo principal com espaçamento entre eles */
+  list-style-type: none; /* Remove os marcadores de lista padrão */
+  padding: 0 2%; /* Adiciona preenchimento horizontal à lista */
+}
+
+.alinhamento nav.desktop ul li {
+  display: flex; /* Define um contêiner flexível para os itens da lista */
+  list-style-type: none; /* Remove os marcadores de lista padrão */
+}
+
+.alinhamento nav.desktop li a {
+  gap: 4rem; /* Define o espaçamento entre os elementos âncora */
+  text-decoration: none; /* Remove a decoração de texto sublinhado dos links */
+  color: var(--border-color); /* Define a cor do texto dos links usando a variável de cor */
+}
+
+.alinhamento nav.desktop a:hover {
+  color: rgb(199, 0, 0); /* Define a cor do texto dos links ao passar o mouse sobre eles */
+}
+
+.container {
+  display: grid; /* Define um contêiner de layout de grade */
+  grid-template-columns: 60% 40%; /* Define duas colunas na grade com larguras proporcionais */
+  grid-template-rows: 345px; /* Define a altura das linhas da grade */
+  height: 100%; /* Define a altura do contêiner como 100% da altura do viewport */
+  overflow: auto;
+}
+
+section.session {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  padding: 0 2%; /* Adiciona preenchimento horizontal às sessões */
+  background-color: var(--background-color); /* Define a cor de fundo das sessões */
+}
+
+.session h2, .artigo h2{
+  text-align: center;
+}
+
+article.artigo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 2%; /* Adiciona preenchimento horizontal aos artigos */
+  height: 100%;
+  min-height: 345px; /* Define a altura mínima dos artigos */
+  background-color: var(--background-color); /* Define a cor de fundo dos artigos */
+}
+
+aside.lateral{
+  height: 930px; /* Define a altura da barra lateral */
+  background-color: var(--background-color); /* Define a cor de fundo da barra lateral */
+}
+
+.lateral{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+aside.lateral{
+  padding-top: 150px;
+}
+
+.biografia{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 0px 20px 150px 20px;
+}
+.img {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+}
+
+.video{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+article.div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer {
+  padding: 15px;
+  text-align: center; /* Alinha o texto do rodapé ao centro */
+  font-size: small; /* Define o tamanho da fonte do texto do rodapé */
+  color: var(--border-color);
+  background-color: #85012d3b;
+  height: 160px;
+}
+
+.borda {
+  border-width: 5px; /* Define a largura da borda */
+  border-style: inset; /* Define o estilo da borda como duplo */
+  border-color: var(--border-color); /* Define a cor da borda usando a variável de cor */
+  overflow: auto;
+}
+
+.p{
+  font-size: 18px;
+}
+
+.container__botao{
+  background-color: var(--border-color);
+  border-radius: 5px;
+  padding: 1em;
+  color: white;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: x-large;
+}
+
+.botaocor:hover{
+  color: rgb(199, 0, 0);
+}
+
+.buttonvine{
+  padding: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+  iframe {
+    display: none;
+  }
+}
